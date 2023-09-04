@@ -5,7 +5,7 @@ from flask import Flask, jsonify, request, make_response, render_template
 curl -X GET http://127.0.0.1:5000/api_information
 curl -X GET http://127.0.0.1:5000/active_employees
 curl -X POST -H "Content-Type: application/json" -d '{"name": "Lisa_Kyhlberg", "status":"active", "role":"data engineer", "age": 28}' http://127.0.0.1:5000/add_employee
-curl -X PUT -H "Content-Type: application/json" -d '{"name": "Lisa_Kyhlberg", "status":"inactive"}' http://127.0.0.1:5000//update_employee_status
+curl -X PUT -H "Content-Type: application/json" -d '{"name": "Lisa_Kyhlberg", "status":"inactive"}' http://127.0.0.1:5000/update_employee_status
 """
 
 # Creating an employee list to work with
