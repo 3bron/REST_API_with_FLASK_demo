@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, make_response
+from flask import Flask, jsonify, request, make_response, render_template
 
 ########## Use following end URLs for this REST API demo ###########
 """
@@ -16,6 +16,11 @@ employees_info = {
 
 # creating the flask app
 app = Flask(__name__)
+
+# Redirect to a home page
+@app.route('/')
+def home():
+    return render_template('html/home.html')
 
 # GET request to retrieve API information
 @app.route('/api_information', methods=['GET'])
