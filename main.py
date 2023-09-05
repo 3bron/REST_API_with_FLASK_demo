@@ -64,7 +64,7 @@ def update_employee():
     else:
         try:
             employees_info[information['name']]['status'] = information['status']
-            return make_response(jsonify({'message': 'Succesfully updated an employees information'}), 200)
+            return make_response(jsonify({'message': 'Succesfully updated employee'}), 200)
         except Exception as e:
             print(f'Error in update_employee - {e}')
             return make_response(jsonify({'message': 'Invalid employees information. Provide information in the right format'}), 400)
