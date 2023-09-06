@@ -20,7 +20,7 @@ app = Flask(__name__)
 # Redirect to a home page
 @app.route('/')
 def home():
-    return render_template('html/home.html')
+    return render_template('html/home.html', employees=employees_info)
 
 # GET request to retrieve API information
 @app.route('/api_information', methods=['GET'])
