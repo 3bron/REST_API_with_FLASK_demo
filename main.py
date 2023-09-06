@@ -5,7 +5,7 @@ from flask import Flask, jsonify, request, make_response, render_template
 curl -X GET http://127.0.0.1:5000/api_information
 curl -X GET http://127.0.0.1:5000/active_employees
 curl -X POST -H "Content-Type: application/json" -d '{"name": "Lisa_Kyhlberg", "status":"active", "role":"data engineer", "age": 28}' http://127.0.0.1:5000/add_employee
-curl -X PUT -H "Content-Type: application/json" -d '{"name": "Lisa_Kyhlberg", "status":"inactive"}' http://127.0.0.1:5000/update_employee_status
+curl -X PUT -H "Content-Type: application/json" -d '{"name": "Roman_Landin", "status":"inactive"}' http://127.0.0.1:5000/update_employee_status
 """
 
 # Creating an employee list to work with
@@ -18,14 +18,14 @@ employees_info = {
 app = Flask(__name__)
 
 # Redirect to a home page
-@app.route('/')
+@app.route('/home')
 def home():
     return render_template('html/home.html', employees=employees_info)
 
 # GET request to retrieve API information
 @app.route('/api_information', methods=['GET'])
 def api_information():
-    return make_response(jsonify({'message': 'This REST API is used as a demonstration of Flask capabilities'}), 200)
+    return make_response(jsonify({'message': 'This REST API is used as a demonstration'}), 200)
 
 # GET request to retrieve names of all active employees
 @app.route('/active_employees', methods=['GET'])
