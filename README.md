@@ -14,7 +14,7 @@ curl -X GET http://127.0.0.1:5000/api_information
 curl -X GET http://127.0.0.1:5000/active_employees
 
 # CREATE A NEW EMPLOYEE
-curl -X POST -H "Content-Type: application/json" -d '{"name": "Lisa_Kyhlberg", "status":"active", "role":"data engineer", "age": 28}' http://127.0.0.1:5000/add_employee
+curl -X POST -H "Content-Type: application/json" -d '{"name": "Lisa_Johnsson", "status":"active", "role":"data engineer", "age": 28}' http://127.0.0.1:5000/add_employee
 
 # UPDATE AN EXISTING EMPLOYEE
-curl -X PUT -H "Content-Type: application/json" -d '{"name": "Roman_Landin", "status":"inactive"}' http://127.0.0.1:5000/update_employee_status
+curl -X PUT -H "Content-Type: application/json" -d '{"name": "Roman_Green", "status":"inactive"}' http://127.0.0.1:5000/update_employee_status
