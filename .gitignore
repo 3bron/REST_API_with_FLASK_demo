@@ -2,8 +2,14 @@
 venv/
 .venv/
 
+# Ignore files in directory textFiles
+textFiles/
+
 # Ignore log files
 *.log
+
+# Ignore yaml files
+*.yaml
 
 # Ignore Python bytecode files
 __pycache__/
