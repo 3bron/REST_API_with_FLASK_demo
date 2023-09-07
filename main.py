@@ -10,8 +10,8 @@ curl -X PUT -H "Content-Type: application/json" -d '{"name": "Roman_Landin", "st
 
 # Creating an employee list to work with
 employees_info = {
-    'Roman_Landin':{'status': 'active', 'role':'data engineer', 'age': 34},
-    'Jakob_Svensson':{'status': 'active', 'role':'manager', 'age': 35}
+    'Roman_Green':{'status': 'active', 'role':'data engineer', 'age': 34},
+    'Jakob_Thompson':{'status': 'active', 'role':'manager', 'age': 35}
     }
 
 # creating the flask app
